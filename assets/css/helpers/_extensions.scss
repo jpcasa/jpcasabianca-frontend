@@ -1,0 +1,33 @@
+/*
+ * A simple set of extensions
+ * Made by JP Casabianca
+*/
+@import "mixins";
+@import "variables";
+
+%circle-icon {
+  display: inline-block;
+  padding: 10px;
+  @include border-radius(50%);
+}
+
+%background-green {
+  background-color: $color-green-light;
+  color: $color-green-dark;
+  &:hover {
+    background-color: $color-green;
+  }
+}
+
+%cta {
+  text-decoration: none;
+  display: inline-block;
+  padding: 9px 45px;
+  font-size: 14px;
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+  font-family: $gotham-rounded-medium;
+  @include border-radius($border-radius);
+  @extend %background-green;
+}
