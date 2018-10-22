@@ -3,14 +3,14 @@ import Router from 'vue-router'
 
 Vue.use(Router)
 
-const _71d400f8 = () => import('../pages/my-tech-stack/index.vue' /* webpackChunkName: "pages/my-tech-stack/index" */).then(m => m.default || m)
-const _5c1fd2c6 = () => import('../pages/blog/index.vue' /* webpackChunkName: "pages/blog/index" */).then(m => m.default || m)
-const _0c6746ae = () => import('../pages/case-studies/index.vue' /* webpackChunkName: "pages/case-studies/index" */).then(m => m.default || m)
-const _3db50832 = () => import('../pages/creative-process.vue' /* webpackChunkName: "pages/creative-process" */).then(m => m.default || m)
-const _61e9dda9 = () => import('../pages/case-studies/printa-delivery.vue' /* webpackChunkName: "pages/case-studies/printa-delivery" */).then(m => m.default || m)
-const _0b01a36c = () => import('../pages/blog/_url.vue' /* webpackChunkName: "pages/blog/_url" */).then(m => m.default || m)
-const _eb583224 = () => import('../pages/my-tech-stack/_url.vue' /* webpackChunkName: "pages/my-tech-stack/_url" */).then(m => m.default || m)
-const _7363db7e = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
+const _2bd9ef04 = () => import('../pages/my-tech-stack/index.vue' /* webpackChunkName: "pages/my-tech-stack/index" */).then(m => m.default || m)
+const _c06f1974 = () => import('../pages/blog/index.vue' /* webpackChunkName: "pages/blog/index" */).then(m => m.default || m)
+const _0fa7672e = () => import('../pages/case-studies/index.vue' /* webpackChunkName: "pages/case-studies/index" */).then(m => m.default || m)
+const _7b8348b2 = () => import('../pages/creative-process.vue' /* webpackChunkName: "pages/creative-process" */).then(m => m.default || m)
+const _5ddb5e29 = () => import('../pages/case-studies/printa-delivery.vue' /* webpackChunkName: "pages/case-studies/printa-delivery" */).then(m => m.default || m)
+const _5782f2ec = () => import('../pages/blog/_url.vue' /* webpackChunkName: "pages/blog/_url" */).then(m => m.default || m)
+const _e4d7f124 = () => import('../pages/my-tech-stack/_url.vue' /* webpackChunkName: "pages/my-tech-stack/_url" */).then(m => m.default || m)
+const _ea39bc7e = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
 
 
 
@@ -72,42 +72,42 @@ export function createRouter () {
     routes: [
 		{
 			path: "/my-tech-stack",
-			component: _71d400f8,
+			component: _2bd9ef04,
 			name: "my-tech-stack"
 		},
 		{
 			path: "/blog",
-			component: _5c1fd2c6,
+			component: _c06f1974,
 			name: "blog"
 		},
 		{
 			path: "/case-studies",
-			component: _0c6746ae,
+			component: _0fa7672e,
 			name: "case-studies"
 		},
 		{
 			path: "/creative-process",
-			component: _3db50832,
+			component: _7b8348b2,
 			name: "creative-process"
 		},
 		{
 			path: "/case-studies/printa-delivery",
-			component: _61e9dda9,
+			component: _5ddb5e29,
 			name: "case-studies-printa-delivery"
 		},
 		{
 			path: "/blog/:url",
-			component: _0b01a36c,
+			component: _5782f2ec,
 			name: "blog-url"
 		},
 		{
 			path: "/my-tech-stack/:url?",
-			component: _eb583224,
+			component: _e4d7f124,
 			name: "my-tech-stack-url"
 		},
 		{
 			path: "/",
-			component: _7363db7e,
+			component: _ea39bc7e,
 			name: "index"
 		}
     ],

@@ -12,7 +12,7 @@ import { setContext, getLocation, getRouteData } from './utils'
 import { createStore } from './store.js'
 
 /* Plugins */
-import nuxt_plugin_axios_fb15b586 from 'nuxt_plugin_axios_fb15b586' // Source: ./axios.js
+import nuxt_plugin_axios_574025bd from 'nuxt_plugin_axios_574025bd' // Source: ./axios.js
 import nuxt_plugin_vuescrollto_2a1bb871 from 'nuxt_plugin_vuescrollto_2a1bb871' // Source: ../plugins/vue-scrollto.js
 import nuxt_plugin_vuescrollactive_61ae0586 from 'nuxt_plugin_vuescrollactive_61ae0586' // Source: ../plugins/vue-scrollactive.js
 
@@ -153,7 +153,7 @@ async function createApp (ssrContext) {
 
   // Plugin execution
   
-  if (typeof nuxt_plugin_axios_fb15b586 === 'function') await nuxt_plugin_axios_fb15b586(app.context, inject)
+  if (typeof nuxt_plugin_axios_574025bd === 'function') await nuxt_plugin_axios_574025bd(app.context, inject)
   if (typeof nuxt_plugin_vuescrollto_2a1bb871 === 'function') await nuxt_plugin_vuescrollto_2a1bb871(app.context, inject)
   if (typeof nuxt_plugin_vuescrollactive_61ae0586 === 'function') await nuxt_plugin_vuescrollactive_61ae0586(app.context, inject)
   
