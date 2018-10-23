@@ -5,7 +5,7 @@
     <main>
 
       <!-- HEADERS -->
-      <span @click="showMobileMenu = true" class="icon-menu" id="menu-icon"></span>
+      <span @click="show_mobile_menu = true" class="icon-menu" id="menu-icon"></span>
       <span @click="toggleMobileContact('open')" class="icon-message-square" id="contact-icon"></span>
 
       <section id="page-section">
@@ -25,8 +25,8 @@
     <MobileNav :menu="mobileMenu" />
 
     <transition name="fade">
-      <div class="mobile-header" v-if="showMobileMenu">
-        <i class="icon-x-circle" @click="showMobileMenu = false"></i>
+      <div class="mobile-header" v-if="show_mobile_menu">
+        <i class="icon-x-circle" @click="show_mobile_menu = false"></i>
         <nuxt-link
           v-for="(item, index) in mainMenu.menu_items"
           :key="index"
@@ -39,7 +39,7 @@
     </transition>
 
     <transition name="fade">
-      <div class="mobile-contact-info" v-if="showMobileInfo">
+      <div class="mobile-contact-info" v-if="show_mobile_info">
         <i class="icon-x-circle" @click="toggleMobileContact('close')" id="close-contact-info"></i>
         <MobileContact :menu="contactMenu.menu_items" />
       </div>
@@ -50,11 +50,11 @@
       :menu="mainMenu.menu_items"
       :contact="contactMenu.menu_items" />
 
-    <a v-show="showMessageIcons" href="https://wa.me/573507015800" target="_blank" id="contact-whatsapp">
+    <a v-show="show_message_icons" href="https://wa.me/573507015800" target="_blank" id="contact-whatsapp">
       <img src="~/static/img/whatsapp.svg" />
     </a>
 
-    <a v-show="showMessageIcons" href="http://m.me/juan.p.casabianca" target="_blank" id="contact-fb">
+    <a v-show="show_message_icons" href="http://m.me/juan.p.casabianca" target="_blank" id="contact-fb">
       <img src="~/static/img/fb-messenger.svg" />
     </a>
 
@@ -71,9 +71,9 @@ import MobileContact from '~/components/Elements/MobileContact.vue'
 export default {
   data() {
     return {
-      showMobileMenu: false,
-      showMobileInfo: false,
-      showMessageIcons: true
+      show_mobile_menu: false,
+      show_mobile_info: false,
+      show_message_icons: true
     }
   },
   computed: {
@@ -96,15 +96,15 @@ export default {
   methods: {
     activateMenu(id) {
       this.$store.dispatch('menus/getSubMenu', id)
-      this.showMobileMenu = false
+      this.show_mobile_menu = false
     },
     toggleMobileContact(action) {
       if (action == 'open') {
-        this.showMobileInfo = true
-        this.showMessageIcons = false
+        this.show_mobile_info = true
+        this.show_message_icons = false
       } else {
-        this.showMobileInfo = false
-        this.showMessageIcons = true
+        this.show_mobile_info = false
+        this.show_message_icons = true
       }
     }
   },

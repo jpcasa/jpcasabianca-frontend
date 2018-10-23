@@ -2,7 +2,7 @@
   <div class="color-palette">
     <div class="color-palette-cont" v-for="(color, index) in colors" :key="index">
       <p>{{ color.title }}</p>
-      <div class="color-palette-low" :style="palette_style(color)">
+      <div class="color-palette-low" :style="paletteStyle(color)">
         <ul>
           <li>C: {{ color.cmyk.c }}</li>
           <li>M: {{ color.cmyk.m }}</li>
@@ -14,7 +14,7 @@
           <li>G: {{ color.rgb.g }}</li>
           <li>B: {{ color.rgb.b }}</li>
         </ul>
-        <hr :style="hr_style(color)">
+        <hr :style="hrStyle(color)">
         <ul>
           <li>PANTONE</li>
           <li>{{ color.pantone }}</li>
@@ -28,12 +28,12 @@
 export default {
   props: ['colors'],
   methods: {
-    palette_style(color) {
+    paletteStyle(color) {
       return `background-color:${color.hex};
               color:${color.fontColor};
               border:1px solid ${color.border};`
     },
-    hr_style(color) {
+    hrStyle(color) {
       return `border:none;
               border-bottom: 1px solid ${color.fontColor};`
     }

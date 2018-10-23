@@ -181,7 +181,7 @@
           <div class="third">
             <span class="step">5.0</span>
             <div class="line" />
-            <div class="circle circle-whitez-stripes" />
+            <div class="circle circle-white-stripes" />
             <span class="title" id="title1">Test</span>
           </div>
         </div>
@@ -466,7 +466,7 @@ export default {
       section_two: data.section_two,
       colors: data.colors,
       section_four: data.section_four,
-      chartData: {
+      chart_data: {
         labels: ['Running', 'Swimming', 'Eating'],
         datasets: [{
           data: [3, 7, 9],
@@ -765,13 +765,12 @@ $color-yellow: #ffc34a;
       width: 100%;
       height: 2px;
       background-color: #000;
-      z-index: -1;
     }
     .circle {
       display: inline-block;
       width: 32px;
       height: 32px;
-      z-index: 3;
+      z-index: 10;
       @include border-radius(50%);
     }
     .circle-black {
@@ -840,6 +839,7 @@ $color-yellow: #ffc34a;
   .samples-container {
     img {
       margin-bottom: 25px;
+      height: auto;
     }
   }
 }

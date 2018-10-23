@@ -11,7 +11,7 @@ module.exports = {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'JP Casabianca&apos;s Website' }
+      { hid: 'description', name: 'description', content: 'Hi there, I\'m JP Casabianca! I\'m a Full Stack Developer and UI / UX Designer. I work remotely, dig Vue & React, use Python and Django, love Star Wars, and more! Find out more...' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }

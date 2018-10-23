@@ -7,7 +7,7 @@
         <DynamicTitleWithCta
           id="title-with-cta1"
           title="I’m a Full Stack Developer and "
-          :words="['Design Cool Stuff', 'Dig Vue and React', 'Totally Into Python', 'Less is More', 'Create Python & JS APIs', 'Know Inbound Marketing', 'Love Star Wars & GOT' , 'Worked in Finance', 'Play Zelda & Mario']"
+          :words="['Design Cool Stuff', 'Dig Vue and React', 'Totally Into Python', 'Work 100% Remotely', 'Create Python & JS APIs', 'Know Inbound Marketing', 'Love Star Wars & GOT' , 'Worked in Finance', 'Play Zelda & Mario']"
           subtitle="Hi There"
           copy="The digital world is crazy, but isn’t that craziness awesome? I strive to find the best and most efficient solutions to the most complex of problems.<br><br> Not only do I apply this to development, but to design and marketing as well. Do you love tech and Star Wars too?"
           cta="Discover Me"

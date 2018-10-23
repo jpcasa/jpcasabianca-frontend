@@ -109,121 +109,14 @@ import TabsFullCards from '~/components/Navigation/Tabs/TabsFullCards.vue'
 import IconSection from '~/components/Sections/IconSection.vue'
 import InboundSection from '~/components/Sections/InboundSection.vue'
 
+import data from '~/assets/data/creative.json'
+
 export default {
   data() {
     return {
-      design_thinking_steps: [
-        {
-          'id': 0,
-          'title': '1.<br>Empathize',
-          'img': 'img/empathize.svg',
-          'copy': '<span class="color-green">Empathy</span> is the key for life, because it’s the path to understanding. Putting yourself in people’s shoes can really make you understand what’s going through their minds.'
-        },
-        {
-          'id': 1,
-          'title': '2.<br>Define',
-          'img': 'img/define.svg',
-          'copy': 'After really understanding the problem, you must <span class="color-green">define</span> the best approach to solving it. You declare personas (people that will use your product or service), what’s going to be easy, what challenges you face, decision to make, etc...'
-        },
-        {
-          'id': 2,
-          'title': '3.<br>Ideate',
-          'img': 'img/ideate.svg',
-          'copy': 'When you define something clearly enough, you can start <span class="color-green">ideating</span> the best solution. This is an analysis stage where you or the team prioritizes work. You come in stronger to a match if you have a game plan.'
-        },
-        {
-          'id': 3,
-          'title': '4.<br>Prototype',
-          'img': 'img/prototype.svg',
-          'copy': 'With the game plan and solution laid out, you can create a real tangible <span class="color-green">prototype</span> of the solution. '
-        },
-        {
-          'id': 4,
-          'title': '5.<br>Test',
-          'img': 'img/test.svg',
-          'copy': 'Finally, with a solution in your hands you can start <span class="color-green">testing</span> it. Iterate quickly, understand what works and create a roadmap to improve the solution.'
-        }
-      ],
-      design_patterns: [
-        {
-          'id': 0,
-          'title': '1.<br>UI Patterns',
-          'img': 'img/uipatterns.svg',
-          'cards': [
-            {
-              'icon': 'img/icon-forms.svg',
-              'title': 'Inputs & Forms'
-            },
-            {
-              'icon': 'img/icon-navigation.svg',
-              'title': 'Navigation'
-            },
-            {
-              'icon': 'img/icon-data.svg',
-              'title': 'Data'
-            },
-            {
-              'icon': 'img/icon-shopping.svg',
-              'title': 'Shopping'
-            },
-            {
-              'icon': 'img/icon-social.svg',
-              'title': 'Social'
-            },
-            {
-              'icon': 'img/icon-onboarding.svg',
-              'title': 'Onboarding'
-            }
-          ]
-        },
-        {
-          'id': 1,
-          'title': '2.<br>Behavioral Patterns',
-          'img': 'img/behaviorpatterns.svg',
-          'cards': [
-            {
-              'icon': 'img/icon-recognition-over-recall.svg',
-              'title': 'Recognition over recall'
-            },
-            {
-              'icon': 'img/icon-gamification.svg',
-              'title': 'Gamification'
-            },
-            {
-              'icon': 'img/icon-cognition.svg',
-              'title': 'Cognition'
-            },
-            {
-              'icon': 'img/icon-feedback.svg',
-              'title': 'Feedback'
-            },
-            {
-              'icon': 'img/icon-social.svg',
-              'title': 'Social'
-            }
-          ]
-        }
-      ],
-      agile_section: [
-        {
-          'icon': 'img/product-owner.svg',
-          'title': 'Product Owner',
-          'subtitle': 'David',
-          'list': ['Handles Communication with the customer', 'Prioritizes Backlog', 'Communicates with dev team']
-        },
-        {
-          'icon': 'img/scrum-master.svg',
-          'title': 'Scrum Master',
-          'subtitle': 'Sara',
-          'list': ['Helps Team Deliver', 'Identifies Hassles', 'Princess Leia (total badass)']
-        },
-        {
-          'icon': 'img/dev-team.svg',
-          'title': 'Dev Team Members',
-          'subtitle': 'Kim, Andy, Jane',
-          'list': ['Deliver a really good product', 'Order a bunch of food', 'Write awesome code']
-        }
-      ]
+      design_thinking_steps: data.design_thinking_steps,
+      design_patterns: data.design_patterns,
+      agile_section: data.agile_section
     }
   },
   components: {
