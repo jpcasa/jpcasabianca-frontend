@@ -1,0 +1,96 @@
+{
+  "timeline": [
+    {
+        "order": 1,
+        "owner": "jpc",
+        "id": 1,
+        "job_title": "Full Stack Developer",
+        "company": "Freelancer",
+        "start_date": "06/2010",
+        "end_date": "Present",
+        "place": "Remote",
+        "summary": "Remote Full Stack Developer (15+ clients)."
+    },
+    {
+      "order": 1,
+      "owner": "jpc",
+      "id": 2,
+      "job_title": "Full Stack Developer",
+      "company": "Rabinovici & Associates",
+      "start_date": "01/2018",
+      "end_date": "Present",
+      "place": "Remote",
+      "summary": "Remote Full Stack Developer for B2B Marketing Agency based in Miami, FL."
+    },
+    {
+      "order": 1,
+      "owner": "jpc",
+      "id": 3,
+      "job_title": "Full Stack Developer",
+      "company": "Estudio Codesign",
+      "start_date": "01/2016",
+      "end_date": "01/2018",
+      "place": "Remote & Bogotá",
+      "summary": "Full Stack Developer for Digital Agency. Python, Javascript, and Design."
+    },
+    {
+      "order": 4,
+      "owner": "jpc",
+      "id": 4,
+      "job_title": "Board Member & Advisor",
+      "company": "La Ola Naranja",
+      "start_date": "04/2017",
+      "end_date": "Present",
+      "place": "LATAM",
+      "summary": "Building creative industries in LATAM."
+    },
+    {
+      "order": 4,
+      "owner": "jpc",
+      "id": 5,
+      "job_title": "Full Stack Developer",
+      "company": "Grupo Inspiro",
+      "start_date": "01/2015",
+      "end_date": "01/2016",
+      "place": "Bogotá, Colombia",
+      "summary": "Full Stack Developer for Startup Incubator."
+    },
+    {
+      "order": 4,
+      "owner": "jpc",
+      "id": 6,
+      "job_title": "Financial Analyst & Researcher",
+      "company": "Teka Capital",
+      "start_date": "06/2013",
+      "end_date": "01/2014",
+      "place": "Colombia",
+      "summary": "Research, analyze, and interpret financial markets."
+    }
+  ],
+  "case_studies": {
+    "printa_delivery": {
+      "order": 1,
+      "owner": "jpc",
+      "id": 1,
+      "title": "Ctrl + P = Problem. Solving the hassle of printing.",
+      "subtitle": "Let's solve printing!",
+      "summary": "Printing has always proved to be a major headache for everyone, especially for artists, designers, and architects. It’s time consuming and difficult. That’s why we had a big challenge to solve printing. <br><br> Enter: Printa Delivery. Printa solves the hassles of printing and guarantees the best quality and delivery.",
+      "cta": "Learn how we solved printing",
+      "url": "printa-delivery",
+      "tags": "<span>Frontend</span><span>UI / UX Design</span><span>React</span>",
+      "coming_soon": false
+    },
+    "mapps": {
+      "order": 1,
+      "owner": "jpc",
+      "id": 2,
+      "title": "Mapps360 organizes real estate agents lives.",
+      "subtitle": "Who's more disorganized than real estate agents?",
+      "summary": "You probably know some real estate agents, right? Aren’t they absolutely lovely people, but terribly organized? They are ferocious sellers but have problems organizing all of their work.   <br><br>Enter: Mapps360. Mapps360 is a real estate marketing and sales tools that organizes all of the agent’s workflow. It automates time consuming and repetitive processes and provides solid analytics to the agent. They just have to concentrate on selling… Cool!",
+      "cta": "Learn how we organized agents",
+      "url": "mapps360",
+      "tags": "<span>Vue.js</span><span>Python</span><span>UI / UX Design</span><span>CRM</span>",
+      "coming_soon": true
+    }
+  }
+}

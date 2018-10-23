@@ -5,12 +5,12 @@
         <i class="icon-x-circle" @click="closeDetail()" />
       </div>
       <div class="img-circle">
-        <img :src="skill.logo" alt="">
+        <img :src="showImage(skill.logo)" alt="">
       </div>
     </div>
     <div class="skill-content">
       <div class="container">
-        <p class="skill-name">{{ skill.name }}</p>
+        <p class="skill-name">{{ page }}</p>
         <div class="skill-info">
           <p class="skill-info-title">Skill Level</p>
           <div class="dot-chart-row">
@@ -57,7 +57,7 @@
 import RadarChart from '~/components/Elements/Charts/RadarChart.js'
 
 export default {
-  props: ['skill'],
+  props: ['skill', 'page'],
   data() {
     return {
       chartData: {
@@ -76,6 +76,16 @@ export default {
   methods: {
     closeDetail() {
       this.$emit('clicked')
+    },
+    showImage(img) {
+      if (img) {
+        if (img.match('^img/')) {
+          if (this.page != 'main') {
+            return `../${img}`
+          }
+        }
+        return img
+      }
     }
   }
 }
@@ -93,7 +103,7 @@ export default {
   width: 100%;
   max-width: 450px;
   height: 100%;
-  z-index: 1000;
+  z-index: 2000;
   background-color: #fff;
   overflow-y: scroll;
   .top {

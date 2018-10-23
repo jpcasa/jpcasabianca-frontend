@@ -58,7 +58,7 @@
           theme="light" />
         <span class="flashing-title">Swipe Right<i class="icon-arrow-right"></i></span>
       </div>
-      <!-- <Timeline :items="$store.state.experiences.experiences" /> -->
+      <Timeline :items="timeline_data" />
     </section>
 
     <!-- SECTION PROGRAMS -->
@@ -145,12 +145,14 @@ import ImgCard from '~/components/Elements/Cards/ImgCard.vue'
 import CardSlider from '~/components/Sliders/CardSlider.vue'
 import ProfileCard from '~/components/Elements/Cards/ProfileCard.vue'
 
+import data from '~/assets/data/simple.json'
 
 export default {
   data() {
     return {
       url: "frontend",
-      program_url: "business-and-finance"
+      program_url: "business-and-finance",
+      timeline_data: data.timeline
     }
   },
   components: {

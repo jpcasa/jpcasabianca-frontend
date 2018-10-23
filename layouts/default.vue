@@ -340,7 +340,7 @@ main {
 #contact-fb {
   position: fixed;
   bottom: 55px;
-  z-index: 1000;
+  z-index: 1500;
   img {
     width: 35px;
     height: 35px;

@@ -22,10 +22,11 @@
             v-for="(skill, index) in skills"
             :key="index"
             :skill="skill"
+            page="main"
             @clicked="showSkillDetail" />
         </div>
         <transition name="fade">
-          <SkillCardDetail v-show="skill_detail" :skill="detail" @clicked="closeDetail" />
+          <SkillCardDetail v-show="skill_detail" :skill="detail" @clicked="closeDetail" page="main" />
         </transition>
       </div>
     </section>

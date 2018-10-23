@@ -18,8 +18,16 @@
           <span class="text-center"><i class="icon-star"></i> Preferred Choices</span>
         </div>
         <div class="skill-cards">
-          <SkillCard v-for="(skill, index) in skills" :key="index" :skill="skill" />
+          <SkillCard
+            v-for="(skill, index) in skills"
+            :key="index"
+            :skill="skill"
+            page="detail"
+            @clicked="showSkillDetail" />
         </div>
+        <transition name="fade">
+          <SkillCardDetail v-show="skill_detail" :skill="detail" @clicked="closeDetail" page="detail" />
+        </transition>
       </div>
     </section>
 
@@ -30,17 +38,21 @@
 import SimpleTitle from '~/components/Elements/Titles/SimpleTitle.vue'
 import FilterDropdown from '~/components/Navigation/Dropdowns/FilterDropdown.vue'
 import SkillCard from '~/components/Elements/Cards/SkillCard.vue'
+import SkillCardDetail from '~/components/Elements/Cards/SkillCardDetail.vue'
 
 export default {
   data() {
     return {
-      query: null
+      query: null,
+      skill_detail: false,
+      detail: this.$store.state.skills.skills
     }
   },
   components: {
     SimpleTitle,
     FilterDropdown,
-    SkillCard
+    SkillCard,
+    SkillCardDetail
   },
   computed: {
     skills() {
@@ -54,6 +66,15 @@ export default {
     },
     title() {
       return this.$route.params.url
+    }
+  },
+  methods: {
+    showSkillDetail(skill) {
+      this.detail = skill
+      this.skill_detail = true
+    },
+    closeDetail() {
+      this.skill_detail = false
     }
   },
   created() {
@@ -90,10 +111,6 @@ export default {
   .subtitle {
     margin: 0 0 10px 0;
   }
-}
-
-.text-capitalize {
-  text-transform: capitalize;
 }
 
 .search {

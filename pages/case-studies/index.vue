@@ -13,7 +13,7 @@
       </div>
       <img src="img/case-studies-top.png" alt="Case Studies Top" class="mobile">
       <div class="container text-center mobile">
-        <p class="copy">Nothing is cooler than the real thing. You can check out my <a href="https://dribbble.com/jpcasabianca" target="_blank">Dribbble</a> account if you want to see my design work. To check out some public stuff I’ve made go to <a href="https://github.com/jpcasa" target="_blank">Github</a> or <a href="https://bitbucket.org/jpcasabianca/" target="_blank">Bitbucket</a>. If you’re looking for the complete story scroll down.</p>
+        <p class="copy">Nothing is cooler than the real thing. You can check out my <a href="https://www.behance.net/holae2af" target="_blank">Behance</a> account if you want to see my design work. To check out some public stuff I’ve made go to <a href="https://github.com/jpcasa" target="_blank">Github</a> or <a href="https://bitbucket.org/jpcasabianca/" target="_blank">Bitbucket</a>. If you’re looking for the complete story scroll down.</p>
       </div>
       <div class="case-studies-desktop">
         <SimpleTitle
@@ -21,7 +21,7 @@
           class="text-center"
           title="I Love Creating and Building Cool Stuff"
           subtitle="Creative process in action"
-          copy='Nothing is cooler than the real thing. You can check out my <a href="https://dribbble.com/jpcasabianca" target="_blank">Dribbble</a> account if you want to see my design work. To check out some public stuff I’ve made go to <a href="https://github.com/jpcasa" target="_blank">Github</a> or <a href="https://bitbucket.org/jpcasabianca/" target="_blank">Bitbucket</a>. If you’re looking for the complete story scroll down.'
+          copy='Nothing is cooler than the real thing. You can check out my <a href="https://www.behance.net/holae2af" target="_blank">Behance</a> account if you want to see my design work. To check out some public stuff I’ve made go to <a href="https://github.com/jpcasa" target="_blank">Github</a> or <a href="https://bitbucket.org/jpcasabianca/" target="_blank">Bitbucket</a>. If you’re looking for the complete story scroll down.'
           theme="light" />
         <div class="case-studies-desktop-img">
           <img src="img/case-studies-top-desktop.png" alt="Case Studies JP Casabianca" class="desktop" id="simple-title-case-img">
@@ -29,33 +29,33 @@
       </div>
     </section>
 
-    <!-- <section id="printa-delivery">
+    <section id="printa-delivery">
       <div class="container">
         <PortfolioCard class="mobile"
-          :title="$store.state.portfolio.case_studies[0].title"
-          :subtitle="$store.state.portfolio.case_studies[0].subtitle"
-          :copy='$store.state.portfolio.case_studies[0].summary'
-          :cta="$store.state.portfolio.case_studies[0].cta"
-          :ctaUrl="$store.state.portfolio.case_studies[0].url"
-          :comingSoon="$store.state.portfolio.case_studies[0].coming_soon" />
+          :title="case_studies.printa_delivery.title"
+          :subtitle="case_studies.printa_delivery.subtitle"
+          :copy='case_studies.printa_delivery.summary'
+          :cta="case_studies.printa_delivery.cta"
+          :ctaUrl="case_studies.printa_delivery.url"
+          :comingSoon="case_studies.printa_delivery.coming_soon" />
       </div>
       <div class="portfolio-flex desktop" id="printa-desktop">
         <div class="portfolio-card-flex" id="printa-back">
           <PortfolioCardSimple
-            :url="$store.state.portfolio.case_studies[0].url"
-            :title="$store.state.portfolio.case_studies[0].title"
-            :tags="$store.state.portfolio.case_studies[0].tags"
-            :comingSoon="$store.state.portfolio.case_studies[0].coming_soon" />
+            :url="case_studies.printa_delivery.url"
+            :title="case_studies.printa_delivery.title"
+            :tags="case_studies.printa_delivery.tags"
+            :comingSoon="case_studies.printa_delivery.coming_soon" />
         </div>
         <TitleWithCta
           id="portfolio-printa"
           class="padding-right"
-          :title="$store.state.portfolio.case_studies[0].title"
-          :subtitle="$store.state.portfolio.case_studies[0].subtitle"
-          :copy='$store.state.portfolio.case_studies[0].summary'
-          :cta="$store.state.portfolio.case_studies[0].cta"
-          :ctaUrl="'/case-studies/' + $store.state.portfolio.case_studies[0].url"
-          :comingSoon="$store.state.portfolio.case_studies[0].coming_soon"
+          :title="case_studies.printa_delivery.title"
+          :subtitle="case_studies.printa_delivery.subtitle"
+          :copy='case_studies.printa_delivery.summary'
+          :cta="case_studies.printa_delivery.cta"
+          :ctaUrl="'/case-studies/' + case_studies.printa_delivery.url"
+          :comingSoon="case_studies.printa_delivery.coming_soon"
           action="push"
           theme="light" />
       </div>
@@ -64,34 +64,34 @@
     <section id="mapps360">
       <div class="container">
         <PortfolioCard class="mobile"
-          :title="$store.state.portfolio.case_studies[1].title"
-          :subtitle="$store.state.portfolio.case_studies[1].subtitle"
-          :copy='$store.state.portfolio.case_studies[1].summary'
-          :cta="$store.state.portfolio.case_studies[1].cta"
-          :ctaUrl="$store.state.portfolio.case_studies[1].url"
-          :comingSoon="$store.state.portfolio.case_studies[1].coming_soon" />
+          :title="case_studies.mapps.title"
+          :subtitle="case_studies.mapps.subtitle"
+          :copy='case_studies.mapps.summary'
+          :cta="case_studies.mapps.cta"
+          :ctaUrl="case_studies.mapps.url"
+          :comingSoon="case_studies.mapps.coming_soon" />
       </div>
       <div class="portfolio-flex desktop" id="mapps360-desktop">
         <TitleWithCta
           id="portfolio-printa"
           class="padding-left"
-          :title="$store.state.portfolio.case_studies[1].title"
-          :subtitle="$store.state.portfolio.case_studies[1].subtitle"
-          :copy='$store.state.portfolio.case_studies[1].summary'
-          :cta="$store.state.portfolio.case_studies[1].cta"
-          :ctaUrl="'/case-studies/' + $store.state.portfolio.case_studies[1].url"
-          :comingSoon="$store.state.portfolio.case_studies[1].coming_soon"
+          :title="case_studies.mapps.title"
+          :subtitle="case_studies.mapps.subtitle"
+          :copy='case_studies.mapps.summary'
+          :cta="case_studies.mapps.cta"
+          :ctaUrl="'/case-studies/' + case_studies.mapps.url"
+          :comingSoon="case_studies.mapps.coming_soon"
           action="push"
           theme="light" />
         <div class="portfolio-card-flex" id="codesign-back">
           <PortfolioCardSimple
-            :url="$store.state.portfolio.case_studies[1].url"
-            :title="$store.state.portfolio.case_studies[1].title"
-            :tags="$store.state.portfolio.case_studies[1].tags"
-            :comingSoon="$store.state.portfolio.case_studies[1].coming_soon" />
+            :url="case_studies.mapps.url"
+            :title="case_studies.mapps.title"
+            :tags="case_studies.mapps.tags"
+            :comingSoon="case_studies.mapps.coming_soon" />
         </div>
       </div>
-    </section> -->
+    </section>
   </section>
 </template>
 
@@ -101,7 +101,14 @@ import TitleWithCta from '~/components/Elements/Titles/TitleWithCta.vue'
 import PortfolioCard from '~/components/Elements/Cards/PortfolioCard.vue'
 import PortfolioCardSimple from '~/components/Elements/Cards/PortfolioCardSimple.vue'
 
+import data from '~/assets/data/simple.json'
+
 export default {
+  data() {
+    return {
+      case_studies: data.case_studies
+    }
+  },
   components: {
     SimpleTitle,
     TitleWithCta,

@@ -5,7 +5,7 @@
     <div class="skill-card-content" @click="showDetail(skill)">
       <i v-if="skill.preferred" class="favorite icon-star"></i>
       <span class="skill-level">{{ skill.skill_level }}</span>
-      <img class="skill-logo" :src="skill.logo" alt="Vuejs" />
+      <img class="skill-logo" :src="showImage(skill.logo)" alt="Vuejs" />
       <span class="skill-title">{{ skill.name }}</span>
     </div>
 
@@ -16,7 +16,7 @@
 import RadarChart from '~/components/Elements/Charts/RadarChart.js'
 
 export default {
-  props: ['skill'],
+  props: ['skill', 'page'],
   data() {
     return {
       showSkillDetail: false,
@@ -36,6 +36,14 @@ export default {
   methods: {
     showDetail(skill) {
       this.$emit('clicked', skill)
+    },
+    showImage(img) {
+      if (img.startsWith('img/')) {
+        if (this.page != 'main') {
+          return `../${img}`
+        }
+      }
+      return img
     }
   }
 }
