@@ -3,7 +3,7 @@
     <span>Filter Programs</span>
     <p @click="toggle()"><i :class="icon"></i> {{ message }}</p>
     <transition name="fadeHeight">
-      <ul v-show="showDropdown" class="filter-dropdown-container">
+      <ul v-show="show_dropdown" class="filter-dropdown-container">
         <li
           v-for="(item, index) in items"
           :key="index"
@@ -30,15 +30,15 @@ export default {
   props: ['items', 'active'],
   data() {
     return {
-      showDropdown: false,
+      show_dropdown: false,
       icon: 'icon-arrow-down',
       message: 'Business & Finance'
     }
   },
   methods: {
     toggle() {
-      this.showDropdown = !this.showDropdown
-      if (this.showDropdown) {
+      this.show_dropdown = !this.show_dropdown
+      if (this.show_dropdown) {
         this.icon = 'icon-arrow-up'
       } else {
         this.icon = 'icon-arrow-down'
@@ -47,7 +47,7 @@ export default {
     onClickCat (item, version) {
       this.$emit('clicked', item)
       if (version == 'mobile') {
-        this.showDropdown = false
+        this.show_dropdown = false
         this.message = item.name
         this.icon = 'icon-arrow-down'
       }

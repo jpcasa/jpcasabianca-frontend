@@ -19,8 +19,8 @@ export default {
   props: ['skill', 'page'],
   data() {
     return {
-      showSkillDetail: false,
-      chartData: {
+      show_skill_detail: false,
+      chart_data: {
         labels: ['Running', 'Swimming', 'Eating', 'Cycling', 'Eating', 'Cycling'],
         datasets: [{
           data: [9, 10, 6, 7, 8, 9],

@@ -6,11 +6,11 @@
         :key="index"
         v-html="item.title"
         @click="active = item.id"
-        :style="anchor_style"
+        :style="anchorStyle"
         :class="active == item.id ? 'active' : ''" />
     </nav>
     <div class="content text-center">
-      <p :style="copy_style" v-html="copy" />
+      <p :style="copyStyle" v-html="copy" />
     </div>
   </div>
 </template>
@@ -27,14 +27,14 @@ export default {
     copy() {
       return this.items[this.active].copy
     },
-    anchor_style() {
+    anchorStyle() {
       if (this.styles == 'light') {
         return 'color: #0c1623'
       } else {
         return 'color: #fff'
       }
     },
-    copy_style() {
+    copyStyle() {
       if (this.styles == 'light') {
         return 'color: #85949e'
       } else {

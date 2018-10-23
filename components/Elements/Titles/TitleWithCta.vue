@@ -1,8 +1,8 @@
 <template lang="html">
   <div class="title-with-cta">
-    <p :style="subtitle_style" class="subtitle">{{ subtitle }}</p>
-    <h2 :style="title_style" class="title">{{ title }}</h2>
-    <p :style="copy_style" class="copy" v-html="copy" />
+    <p :style="subtitleStyle" class="subtitle">{{ subtitle }}</p>
+    <h2 :style="titleStyle" class="title">{{ title }}</h2>
+    <p :style="copyStyle" class="copy" v-html="copy" />
     <nuxt-link
       class="cta"
       v-show="action == 'push' && !comingSoon"
@@ -25,21 +25,21 @@ import DynamicTitle from '~/components/Elements/Titles/DynamicTitle.vue'
 export default {
   props: ['title', 'subtitle', 'copy', 'cta', 'ctaUrl', 'action', 'theme', 'comingSoon'],
   computed: {
-    title_style() {
+    titleStyle() {
       if (this.theme == 'dark') {
         return 'color:#fff;'
       } else {
         return 'color: #272b2d;'
       }
     },
-    subtitle_style() {
+    subtitleStyle() {
       if (this.theme == 'dark') {
         return 'color:#3eec82;'
       } else {
         return 'color: #23c286;'
       }
     },
-    copy_style() {
+    copyStyle() {
       if (this.theme == 'dark') {
         return 'color:#adc7db;'
       } else {

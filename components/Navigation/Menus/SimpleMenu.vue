@@ -5,7 +5,7 @@
       <a
         v-for="(subItem, index2) in item.sub_menu_items"
         :key="index2"
-        :style="font_size(item)"
+        :style="fontSize(item)"
         :href="subItem.url"
         target="_blank"
         v-html="subItem.title" />
@@ -17,7 +17,7 @@
 export default {
   props: ['menu'],
   methods: {
-    font_size(item) {
+    fontSize(item) {
       if (item.icon == 'big-icon') {
         return 'font-size:24px;'
       } else {

@@ -4,7 +4,7 @@
       :key="index"
       :href="item.url"
       target="_blank">
-      <i :class="display_icon(item.title)"></i>
+      <i :class="displayIcon(item.title)"></i>
     </a>
   </nav>
 </template>
@@ -13,7 +13,7 @@
 export default {
   props: ['items'],
   methods: {
-    display_icon(title) {
+    displayIcon(title) {
       return `icon-${title.toLowerCase()}`
     }
   }

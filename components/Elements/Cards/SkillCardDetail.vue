@@ -30,7 +30,7 @@
         <!-- <div class="skill-info">
           <p class="skill-info-title">Last Project with Vue.js</p>
           <RadarChart
-            :data="chartData" />
+            :data="chart_data" />
         </div> -->
         <div class="skill-info">
           <p class="skill-info-title">Website</p>
@@ -60,7 +60,7 @@ export default {
   props: ['skill', 'page'],
   data() {
     return {
-      chartData: {
+      chart_data: {
         labels: ['Running', 'Swimming', 'Eating', 'Cycling', 'Eating', 'Cycling'],
         datasets: [{
           data: [9, 10, 6, 7, 8, 9],
