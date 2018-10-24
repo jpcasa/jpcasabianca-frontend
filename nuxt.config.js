@@ -17,7 +17,8 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ],
     script: [
-      { src: '~/assets/js/heap.js' }
+      { src: '~/assets/js/heap.js' },
+      { src: '~/assets/js/hotjar.js' }
     ]
   },
   /*
