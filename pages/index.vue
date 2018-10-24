@@ -18,7 +18,7 @@
     </section>
 
     <!-- SECTION SHORT BIO -->
-    <section id="section-short-bio">
+    <section id="section-short-bio" v-observe-visibility="visibilityChanged" class="1">
       <div class="container">
         <ImgTitleWithCta
           title="Hi Stranger!"
@@ -33,7 +33,7 @@
     </section>
 
     <!-- SECTION SKILLS -->
-    <section id="section-skills">
+    <section id="section-skills" v-observe-visibility="visibilityChanged" class="2">
       <div class="container">
         <TitleWithCta
           title="Check out my skills"
@@ -49,7 +49,7 @@
     </section>
 
     <!-- SECTION EXPERIENCE -->
-    <section id="section-experience">
+    <section id="section-experience" v-observe-visibility="visibilityChanged" class="3">
       <div class="container text-center">
         <SimpleTitle
           title="My career and experience"
@@ -62,7 +62,7 @@
     </section>
 
     <!-- SECTION PROGRAMS -->
-    <section id="section-programs">
+    <section id="section-programs" v-observe-visibility="visibilityChanged" class="4">
       <div class="container text-center">
         <SimpleTitle
           id="simple-title-programs"
@@ -83,7 +83,7 @@
       </div>
     </section>
 
-    <section id="section-education">
+    <section id="section-education" v-observe-visibility="visibilityChanged" class="5">
       <div class="container text-center">
         <SimpleTitle
           id="simple-title-education"
@@ -110,7 +110,7 @@
         </div>
         <CardSlider :items="courses" />
       </section>
-      <section id="section-testimonies">
+      <section id="section-testimonies"  v-observe-visibility="visibilityChanged" class="6">
         <div class="container text-center">
           <SimpleTitle
             id="simple-title-testimonies"
@@ -152,7 +152,8 @@ export default {
     return {
       url: "frontend",
       program_url: "business-and-finance",
-      timeline_data: data.timeline
+      timeline_data: data.timeline,
+      is_visible: false
     }
   },
   components: {
@@ -216,6 +217,12 @@ export default {
     },
     searchProgramsApi(url) {
       this.$store.dispatch('programs/getProgramsCat', url)
+    },
+    visibilityChanged (isVisible, entry) {
+      this.is_visible = isVisible
+      if (isVisible) {
+        this.$store.dispatch('menus/getSubMenuActive', entry.target.className)
+      }
     }
   }
 }

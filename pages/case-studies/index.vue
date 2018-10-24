@@ -29,7 +29,7 @@
       </div>
     </section>
 
-    <section id="printa-delivery">
+    <section id="printa-delivery" v-observe-visibility="visibilityChanged" class="13">
       <div class="container">
         <PortfolioCard class="mobile"
           :title="case_studies.printa_delivery.title"
@@ -61,7 +61,7 @@
       </div>
     </section>
 
-    <section id="mapps360">
+    <section id="mapps360" v-observe-visibility="visibilityChanged" class="21">
       <div class="container">
         <PortfolioCard class="mobile"
           :title="case_studies.mapps.title"
@@ -106,7 +106,8 @@ import data from '~/assets/data/simple.json'
 export default {
   data() {
     return {
-      case_studies: data.case_studies
+      case_studies: data.case_studies,
+      is_visible: false
     }
   },
   components: {
@@ -114,6 +115,14 @@ export default {
     TitleWithCta,
     PortfolioCard,
     PortfolioCardSimple
+  },
+  methods: {
+    visibilityChanged (isVisible, entry) {
+      this.is_visible = isVisible
+      if (isVisible) {
+        this.$store.dispatch('menus/getSubMenuActive', entry.target.className)
+      }
+    }
   }
 }
 </script>

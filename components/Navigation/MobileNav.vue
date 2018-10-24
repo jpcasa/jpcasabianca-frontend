@@ -5,8 +5,9 @@
       v-if="item.action=='scroll'"
       :key="index"
       :to="'#' + item.url"
-      v-scroll-to="'#' + item.url"
-      :class="item.id == $store.state.subMenuActive ? 'active scrollactive-item' : 'scrollactive-item'">
+      :class="getClasses(item.id)"
+      @click.native="activateMenu(item.id)"
+      v-scroll-to="'#' + item.url">
       <i :class="'icon-' + item.icon"></i>
       <span>{{ item.title }}</span>
     </nuxt-link>
@@ -15,7 +16,8 @@
       v-if="item.action=='push'"
       :key="index"
       :to="item.url"
-      :class="item.id == $store.state.subMenuActive ? 'active scrollactive-item' : 'scrollactive-item'">
+      @click.native="activateMenu(item.id)"
+      :class="getClasses(item.id)">
       <i :class="'icon-' + item.icon"></i>
       <span>{{ item.title }}</span>
     </nuxt-link>
@@ -24,7 +26,17 @@
 
 <script>
 export default {
-  props: ['menu']
+  props: ['menu'],
+  methods: {
+    getClasses(id) {
+      if (id == this.$store.state.menus.subMenuActive) {
+        return 'is-active'
+      }
+    },
+    activateMenu(id) {
+      this.$store.dispatch('menus/getSubMenuActive', id)
+    }
+  }
 }
 </script>
 
@@ -67,8 +79,7 @@ export default {
       color: $color-green-dark;
     }
   }
-  .is-active,
-  .nuxt-link-exact-active {
+  .is-active {
     background-color: $color-green-light;
     color: $color-green-dark;
   }

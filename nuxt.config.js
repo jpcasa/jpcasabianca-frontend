@@ -34,12 +34,13 @@ module.exports = {
     // SCSS file in the project
     '~/assets/css/main.scss'
   ],
-  plugins: ['~plugins/vue-scrollto.js', '~plugins/vue-scrollactive.js'],
+  plugins: [
+    '~plugins/vue-scrollto.js',
+    '~plugins/vue-scrollactive.js',
+    '~plugins/vue-observe-visibility.js'
+  ],
   modules: [
-    '@nuxtjs/axios',
-    ['@nuxtjs/google-analytics', {
-      id: 'UA-128015698-1'
-    }]
+    '@nuxtjs/axios'
   ],
   axios: {
     baseURL: environment.API_URL

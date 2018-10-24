@@ -12,10 +12,10 @@ import { setContext, getLocation, getRouteData } from './utils'
 import { createStore } from './store.js'
 
 /* Plugins */
-import nuxt_plugin_googleanalytics_4f952a49 from 'nuxt_plugin_googleanalytics_4f952a49' // Source: ./google-analytics.js (ssr: false)
 import nuxt_plugin_axios_574025bd from 'nuxt_plugin_axios_574025bd' // Source: ./axios.js
 import nuxt_plugin_vuescrollto_2a1bb871 from 'nuxt_plugin_vuescrollto_2a1bb871' // Source: ../plugins/vue-scrollto.js
 import nuxt_plugin_vuescrollactive_61ae0586 from 'nuxt_plugin_vuescrollactive_61ae0586' // Source: ../plugins/vue-scrollactive.js
+import nuxt_plugin_vueobservevisibility_ffc64494 from 'nuxt_plugin_vueobservevisibility_ffc64494' // Source: ../plugins/vue-observe-visibility.js
 
 
 // Component: <no-ssr>
@@ -157,10 +157,8 @@ async function createApp (ssrContext) {
   if (typeof nuxt_plugin_axios_574025bd === 'function') await nuxt_plugin_axios_574025bd(app.context, inject)
   if (typeof nuxt_plugin_vuescrollto_2a1bb871 === 'function') await nuxt_plugin_vuescrollto_2a1bb871(app.context, inject)
   if (typeof nuxt_plugin_vuescrollactive_61ae0586 === 'function') await nuxt_plugin_vuescrollactive_61ae0586(app.context, inject)
+  if (typeof nuxt_plugin_vueobservevisibility_ffc64494 === 'function') await nuxt_plugin_vueobservevisibility_ffc64494(app.context, inject)
   
-  if (process.browser) { 
-    if (typeof nuxt_plugin_googleanalytics_4f952a49 === 'function') await nuxt_plugin_googleanalytics_4f952a49(app.context, inject)
-  }
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {

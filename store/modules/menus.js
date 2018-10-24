@@ -37,6 +37,7 @@ const mutations = {
   },
   setSubMenuClick: (state, id) => {
     state.subMenu = state.menu.menu_items[id].sub_menu_items
+    state.subMenuActive = state.menu.menu_items[id].sub_menu_items[0].id
   },
   setFooter1: (state, footer1) => {
     state.footer1 = footer1
@@ -82,6 +83,8 @@ const actions = {
   },
   async getSubMenu ({commit}, id) {
     commit('setSubMenuClick', (id - 1))
+  },
+  async getSubMenuActive ({commit}, id) {
     commit('setSubMenuActive', id)
   },
   async getFooterMenus ({commit}) {

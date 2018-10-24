@@ -14,7 +14,7 @@
       </div>
     </section>
 
-    <section id="design-thinking">
+    <section id="design-thinking" v-observe-visibility="visibilityChanged" class="7">
       <div class="container text-center">
         <SimpleTitle
           id="simple-title-design-patterns"
@@ -28,7 +28,7 @@
       </div>
     </section>
 
-    <section id="ui-ux-patterns">
+    <section id="ui-ux-patterns" v-observe-visibility="visibilityChanged" class="8">
       <div class="container text-center">
         <img src="img/scrum-img.png" alt="Scrum" class="image-responsive">
         <SimpleTitle
@@ -42,7 +42,7 @@
       </div>
     </section>
 
-    <section id="agile-scrum">
+    <section id="agile-scrum" v-observe-visibility="visibilityChanged" class="9">
       <div class="container">
         <SimpleTitle
           id="simple-title-scrum"
@@ -57,7 +57,7 @@
       <img src="img/scrum-agile-desktop.png" alt="Scrum Agile" class="desktop">
     </section>
 
-    <section id="inbound-marketing">
+    <section id="inbound-marketing" v-observe-visibility="visibilityChanged" class="10">
       <div class="container">
         <SimpleTitle
           id="simple-title-inbound"
@@ -72,7 +72,7 @@
       </div>
     </section>
 
-    <section id="automation">
+    <section id="automation" v-observe-visibility="visibilityChanged" class="11">
       <div class="container">
         <SimpleTitle
           id="simple-title-automation"
@@ -86,7 +86,7 @@
       <img src="img/automation-desktop.png" alt="Automation" class="desktop">
     </section>
 
-    <section id="data-analysis">
+    <section id="data-analysis" v-observe-visibility="visibilityChanged" class="12">
       <div class="container text-center">
         <SimpleTitle
           id="simple-title-automation"
@@ -116,7 +116,8 @@ export default {
     return {
       design_thinking_steps: data.design_thinking_steps,
       design_patterns: data.design_patterns,
-      agile_section: data.agile_section
+      agile_section: data.agile_section,
+      is_visible: false
     }
   },
   components: {
@@ -125,6 +126,14 @@ export default {
     TabsFullCards,
     IconSection,
     InboundSection
+  },
+  methods: {
+    visibilityChanged (isVisible, entry) {
+      this.is_visible = isVisible
+      if (isVisible) {
+        this.$store.dispatch('menus/getSubMenuActive', entry.target.className)
+      }
+    }
   }
 }
 </script>
@@ -171,7 +180,7 @@ export default {
     padding: 60px 0 180px 0;
     background-image: url('~/static/img/lower-scrum.png');
     background-size: cover;
-    background-position: bottom;
+    background-position: top;
   }
 }
 
