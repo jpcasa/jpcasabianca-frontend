@@ -15,6 +15,9 @@ module.exports = {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: '~/assets/js/heap.js' }
     ]
   },
   /*
@@ -28,11 +31,14 @@ module.exports = {
   },
   css: [
     // SCSS file in the project
-    '@/assets/css/main.scss'
+    '~/assets/css/main.scss'
   ],
   plugins: ['~plugins/vue-scrollto.js', '~plugins/vue-scrollactive.js'],
   modules: [
     '@nuxtjs/axios',
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-128015698-1'
+    }]
   ],
   axios: {
     baseURL: environment.API_URL
