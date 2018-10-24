@@ -3,8 +3,8 @@
     <div class="container">
       <Subscribe />
       <div class="footer-menus">
-        <ListMenu :items="footer1" />
-        <ListMenu :items="footer2" />
+        <ListMenu :items="footer1" action="push" />
+        <ListMenu :items="footer2" action="blank" />
       </div>
       <div class="footer-info">
         <p>Bogotá, Colombia.</p>
