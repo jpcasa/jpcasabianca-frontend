@@ -1,0 +1,72 @@
+{
+  "dropdown": [
+    {
+      "id": 0,
+      "title": "Absolutely",
+      "postits": [
+        "Education and Formation",
+        "Case Studies",
+        "Tech Stack",
+        "About Me",
+        "Experience",
+        "Resume",
+        "Social Media",
+        "Version Control",
+        "Contact Info",
+        "Blog and Content Creation"
+      ]
+    },
+    {
+      "id": 1,
+      "title": "Definitely",
+      "postits": [
+        "Courses & Certifications",
+        "Design Thinking",
+        "Programs",
+        "Design Patterns",
+        "Soft Skills",
+        "Libraries & Frameworks",
+        "Agile - Scrum",
+        "Digital Marketing?",
+        "How I stay up to date",
+        "What APIs I use"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Need",
+      "postits": [
+        "Product Design",
+        "Collaboration Tools",
+        "Wireframing",
+        "Research",
+        "Sales & CRM",
+        "Accessibility",
+        "Servers",
+        "Design Paradigms",
+        "Data Analysis",
+        "Continuous Integration"
+      ]
+    }
+  ],
+  "buyer_persona_section": [
+    {
+      "icon": "img/product-owner.svg",
+      "title": "Product Owner",
+      "subtitle": "David",
+      "list": ["Handles Communication with the customer", "Prioritizes Backlog", "Communicates with dev team"]
+    },
+    {
+      "icon": "img/scrum-master.svg",
+      "title": "Scrum Master",
+      "subtitle": "Sara",
+      "list": ["Helps Team Deliver", "Identifies Hassles", "Princess Leia (total badass)"]
+    },
+    {
+      "icon": "img/dev-team.svg",
+      "title": "Dev Team Members",
+      "subtitle": "Kim, Andy, Jane",
+      "list": ["Deliver a really good product", "Order a bunch of food", "Write awesome code"]
+    }
+  ]
+}

@@ -29,6 +29,38 @@
       </div>
     </section>
 
+    <section id="jpcasabianca" v-observe-visibility="visibilityChanged" class="29">
+      <div class="container">
+        <PortfolioCard class="mobile"
+          :title="case_studies.jpc.title"
+          :subtitle="case_studies.jpc.subtitle"
+          :copy='case_studies.jpc.summary'
+          :cta="case_studies.jpc.cta"
+          :ctaUrl="case_studies.jpc.url"
+          :comingSoon="case_studies.jpc.coming_soon" />
+      </div>
+      <div class="portfolio-flex desktop" id="printa-desktop">
+        <div class="portfolio-card-flex" id="printa-back">
+          <PortfolioCardSimple
+            :url="case_studies.jpc.url"
+            :title="case_studies.jpc.title"
+            :tags="case_studies.jpc.tags"
+            :comingSoon="case_studies.jpc.coming_soon" />
+        </div>
+        <TitleWithCta
+          id="portfolio-printa"
+          class="padding-right"
+          :title="case_studies.jpc.title"
+          :subtitle="case_studies.jpc.subtitle"
+          :copy='case_studies.jpc.summary'
+          :cta="case_studies.jpc.cta"
+          :ctaUrl="'/case-studies/' + case_studies.jpc.url"
+          :comingSoon="case_studies.jpc.coming_soon"
+          action="push"
+          theme="light" />
+      </div>
+    </section>
+
     <section id="printa-delivery" v-observe-visibility="visibilityChanged" class="13">
       <div class="container">
         <PortfolioCard class="mobile"
@@ -39,17 +71,10 @@
           :ctaUrl="case_studies.printa_delivery.url"
           :comingSoon="case_studies.printa_delivery.coming_soon" />
       </div>
-      <div class="portfolio-flex desktop" id="printa-desktop">
-        <div class="portfolio-card-flex" id="printa-back">
-          <PortfolioCardSimple
-            :url="case_studies.printa_delivery.url"
-            :title="case_studies.printa_delivery.title"
-            :tags="case_studies.printa_delivery.tags"
-            :comingSoon="case_studies.printa_delivery.coming_soon" />
-        </div>
+      <div class="portfolio-flex desktop" id="mapps360-desktop">
         <TitleWithCta
           id="portfolio-printa"
-          class="padding-right"
+          class="padding-left"
           :title="case_studies.printa_delivery.title"
           :subtitle="case_studies.printa_delivery.subtitle"
           :copy='case_studies.printa_delivery.summary'
@@ -58,6 +83,13 @@
           :comingSoon="case_studies.printa_delivery.coming_soon"
           action="push"
           theme="light" />
+        <div class="portfolio-card-flex" id="codesign-back">
+          <PortfolioCardSimple
+            :url="case_studies.printa_delivery.url"
+            :title="case_studies.printa_delivery.title"
+            :tags="case_studies.printa_delivery.tags"
+            :comingSoon="case_studies.printa_delivery.coming_soon" />
+        </div>
       </div>
     </section>
 
@@ -71,10 +103,17 @@
           :ctaUrl="case_studies.mapps.url"
           :comingSoon="case_studies.mapps.coming_soon" />
       </div>
-      <div class="portfolio-flex desktop" id="mapps360-desktop">
+      <div class="portfolio-flex desktop" id="printa-desktop">
+        <div class="portfolio-card-flex" id="mapps360-back">
+          <PortfolioCardSimple
+            :url="case_studies.mapps.url"
+            :title="case_studies.mapps.title"
+            :tags="case_studies.mapps.tags"
+            :comingSoon="case_studies.mapps.coming_soon" />
+        </div>
         <TitleWithCta
           id="portfolio-printa"
-          class="padding-left"
+          class="padding-right"
           :title="case_studies.mapps.title"
           :subtitle="case_studies.mapps.subtitle"
           :copy='case_studies.mapps.summary'
@@ -83,15 +122,9 @@
           :comingSoon="case_studies.mapps.coming_soon"
           action="push"
           theme="light" />
-        <div class="portfolio-card-flex" id="codesign-back">
-          <PortfolioCardSimple
-            :url="case_studies.mapps.url"
-            :title="case_studies.mapps.title"
-            :tags="case_studies.mapps.tags"
-            :comingSoon="case_studies.mapps.coming_soon" />
-        </div>
       </div>
     </section>
+
   </section>
 </template>
 

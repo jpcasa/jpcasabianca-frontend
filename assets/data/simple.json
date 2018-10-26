@@ -78,10 +78,10 @@
       "cta": "Learn how we solved printing",
       "url": "printa-delivery",
       "tags": "<span>Frontend</span><span>UI / UX Design</span><span>React</span>",
-      "coming_soon": false
+      "coming_soon": true
     },
     "mapps": {
-      "order": 1,
+      "order": 2,
       "owner": "jpc",
       "id": 2,
       "title": "Mapps360 organizes real estate agents lives.",
@@ -91,6 +91,18 @@
       "url": "mapps360",
       "tags": "<span>Vue.js</span><span>Python</span><span>UI / UX Design</span><span>CRM</span>",
       "coming_soon": true
+    },
+    "jpc": {
+      "order": 3,
+      "owner": "jpc",
+      "id": 2,
+      "title": "Time For a Change",
+      "subtitle": "Presenting the New JP Casabianca Website",
+      "summary": "Winter is coming and it was time for a change. I decided to update my website and use it as an experiment to use Django Rest Framework with Nuxt.js.",
+      "cta": "Learn Why and How I Redesigned",
+      "url": "jpcasabianca",
+      "tags": "<span>Vue.js</span><span>Nuxt.js</span><span>Python</span><span>Django API</span><span>UI / UX Design</span>",
+      "coming_soon": false
     }
   }
 }

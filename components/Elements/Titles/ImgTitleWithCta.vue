@@ -2,7 +2,7 @@
   <div :class="'title-with-cta ' + className">
     <p class="subtitle">{{ subtitle }}</p>
     <h2 class="title">{{ title }}</h2>
-    <img src="img/jp.png" alt="">
+    <img src="~/static/img/jp.png" alt="">
     <p class="copy" v-html="copy" />
     <nuxt-link
       class="cta"

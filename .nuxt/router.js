@@ -4,10 +4,11 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const _2bd9ef04 = () => import('../pages/my-tech-stack/index.vue' /* webpackChunkName: "pages/my-tech-stack/index" */).then(m => m.default || m)
-const _c06f1974 = () => import('../pages/blog/index.vue' /* webpackChunkName: "pages/blog/index" */).then(m => m.default || m)
 const _0fa7672e = () => import('../pages/case-studies/index.vue' /* webpackChunkName: "pages/case-studies/index" */).then(m => m.default || m)
+const _c06f1974 = () => import('../pages/blog/index.vue' /* webpackChunkName: "pages/blog/index" */).then(m => m.default || m)
 const _7b8348b2 = () => import('../pages/creative-process.vue' /* webpackChunkName: "pages/creative-process" */).then(m => m.default || m)
 const _5ddb5e29 = () => import('../pages/case-studies/printa-delivery.vue' /* webpackChunkName: "pages/case-studies/printa-delivery" */).then(m => m.default || m)
+const _5171dd50 = () => import('../pages/case-studies/jpcasabianca.vue' /* webpackChunkName: "pages/case-studies/jpcasabianca" */).then(m => m.default || m)
 const _5782f2ec = () => import('../pages/blog/_url.vue' /* webpackChunkName: "pages/blog/_url" */).then(m => m.default || m)
 const _e4d7f124 = () => import('../pages/my-tech-stack/_url.vue' /* webpackChunkName: "pages/my-tech-stack/_url" */).then(m => m.default || m)
 const _ea39bc7e = () => import('../pages/index.vue' /* webpackChunkName: "pages/index" */).then(m => m.default || m)
@@ -76,14 +77,14 @@ export function createRouter () {
 			name: "my-tech-stack"
 		},
 		{
-			path: "/blog",
-			component: _c06f1974,
-			name: "blog"
-		},
-		{
 			path: "/case-studies",
 			component: _0fa7672e,
 			name: "case-studies"
+		},
+		{
+			path: "/blog",
+			component: _c06f1974,
+			name: "blog"
 		},
 		{
 			path: "/creative-process",
@@ -94,6 +95,11 @@ export function createRouter () {
 			path: "/case-studies/printa-delivery",
 			component: _5ddb5e29,
 			name: "case-studies-printa-delivery"
+		},
+		{
+			path: "/case-studies/jpcasabianca",
+			component: _5171dd50,
+			name: "case-studies-jpcasabianca"
 		},
 		{
 			path: "/blog/:url",
