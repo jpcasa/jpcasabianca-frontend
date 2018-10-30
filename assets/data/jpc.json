@@ -68,5 +68,97 @@
       "subtitle": "Kim, Andy, Jane",
       "list": ["Deliver a really good product", "Order a bunch of food", "Write awesome code"]
     }
+  ],
+  "colors": [
+    {
+      "title": "Neon",
+      "cmyk": {
+        "c": "63%",
+        "m": "0%",
+        "y": "73%",
+        "k": "0%"
+      },
+      "rgb": {
+        "r": "55",
+        "g": "233",
+        "b": "119"
+      },
+      "pantone": "433 C",
+      "hex": "#37e977",
+      "fontColor": "#0f421d",
+      "border": "#37e977"
+    },
+    {
+      "title": "Grass",
+      "cmyk": {
+        "c": "72%",
+        "m": "0%",
+        "y": "66%",
+        "k": "0%"
+      },
+      "rgb": {
+        "r": "32",
+        "g": "186",
+        "b": "123"
+      },
+      "pantone": "1-1 C",
+      "hex": "#20ba7b",
+      "fontColor": "#0f421d",
+      "border": "#20ba7b"
+    },
+    {
+      "title": "Dolphin",
+      "cmyk": {
+        "c": "41%",
+        "m": "17%",
+        "y": "11%",
+        "k": "0%"
+      },
+      "rgb": {
+        "r": "164",
+        "g": "191",
+        "b": "214"
+      },
+      "pantone": "710 C",
+      "hex": "#a4bfd6",
+      "fontColor": "#0f1620",
+      "border": "#a4bfd6"
+    },
+    {
+      "title": "501",
+      "cmyk": {
+        "c": "91%",
+        "m": "71%",
+        "y": "40%",
+        "k": "35%"
+      },
+      "rgb": {
+        "r": "39",
+        "g": "61",
+        "b": "88"
+      },
+      "pantone": "660 C",
+      "hex": "#273d58",
+      "fontColor": "#fff",
+      "border": "#273d58"
+    },
+    {
+      "title": "Space",
+      "cmyk": {
+        "c": "95%",
+        "m": "80%",
+        "y": "55%",
+        "k": "78%"
+      },
+      "rgb": {
+        "r": "15",
+        "g": "22",
+        "b": "32"
+      },
+      "pantone": "122 C",
+      "hex": "#0f1620",
+      "fontColor": "#fff",
+      "border": "#0f1620"
+    }
   ]
 }
