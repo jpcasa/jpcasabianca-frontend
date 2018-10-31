@@ -276,9 +276,9 @@
           subtitle="The Matrix"
           copy='Time to code! After testing the prototype and tweaking the last UI / UX details I went ahead and started to code.'
           theme="light" />
+        <img src="~/static/img/jpc/coding-desktop.png" class="tablet" alt="Coding JP Casabianca">
       </div>
       <img src="~/static/img/jpc/coding.png" class="mobile-small" alt="Coding JP Casabianca">
-      <img src="~/static/img/jpc/coding-desktop.png" class="tablet" alt="Coding JP Casabianca">
     </section>
 
     <section id="jp-section-8">
@@ -454,9 +454,11 @@ export default {
         @content;
     }
 }
-@include m600 {}
-@include m768 {}
-@include m992 {}
+@mixin m1200 {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
 
 .cont {
   width: 80%;
@@ -553,6 +555,9 @@ img {
       @include m768 {
         text-align: left;
         flex: 2;
+      }
+      @include m1200 {
+        margin-top: 100px;
       }
     }
     .comp-cont {
@@ -922,7 +927,7 @@ img {
       padding: 10px 25px;
       background-color: $color-green-light;
       color: $color-green-dark;
-      margin: 0 5px;
+      margin: 0 5px 10px 5px;
       text-decoration: none;
       @include border-radius(8px);
       &:hover {

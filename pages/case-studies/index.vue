@@ -203,6 +203,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-height: 200px;
   }
   .padding-right {
     padding-right: 50px;
